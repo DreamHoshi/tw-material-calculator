@@ -2,7 +2,14 @@
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TW 調合素材計算機</title><meta name="description" content="レシピと所持数から必要な調合素材・費用を計算します。"><link rel="stylesheet" href="style.css"><script defer src="data.js"></script><script defer src="calculator.js"></script><script defer src="app.js"></script></head>
 <body><main><header><h1>TW 調合素材計算機</h1><span>89レシピ</span></header>
 <form id="controls"><label class="recipe">作りたい物<select id="recipe" required></select></label><label>制作個数<input id="amount" type="number" min="1" max="1000000000" step="1" value="1" required></label><button type="submit">必要素材を計算</button><button type="button" id="save" class="secondary">所持数を保存</button></form>
-<p id="message" role="status" aria-live="polite"></p><section class="summary" aria-label="費用集計"><div>素材費（判明分）<strong id="cost">—</strong></div><div>調合費（登録分）<strong id="fee">—</strong></div><div>単価未設定<strong id="unknown">—</strong></div></section>
-<p class="legend"><span class="intermediate">中間素材</span><span class="related">中間素材の元になる末端素材</span></p>
+<p id="message" role="status" aria-live="polite"></p><section class="summary" aria-label="費用集計"><div>素材費（判明分）<strong id="cost">—</strong></div><div>調合費（登録分）<strong id="fee">—</strong></div></section>
+<p class="legend"><span class="intermediate">中間素材</span><span class="related">中間素材の元になる末端素材</span><span style="background:#ffffff">末端素材</span></p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="必要素材一覧（横スクロールできます）"><table><thead><tr><th>中間素材</th><th>末端素材</th><th>必要数</th><th>所持数</th><th>不足数</th><th>単価</th><th>費用</th><th>入手場所・備考</th></tr></thead><tbody id="rows"></tbody></table></div>
-<footer><p>所持数を編集すると再計算します。「所持数を保存」で、このブラウザに保存できます。</p><p>素材費は単価が判明している分のみ。調合費は登録分のみです。成功率による補正は行いません。</p></footer><noscript>この計算機にはJavaScriptを有効にしてください。</noscript></main></body></html>
+<footer><p>
+    使い方：</p><p>
+    作りたいもの＝調合レシピを選びます（一部合成アイテムも入れてあります）</p><p>
+    製作個数（作りたい数）を入力、必要素材を計算を押します。</p><p>
+    緑背景は中間素材とその中間素材の為の素材です。所持している個数があれば所持数に数字を入力してください。</p><p>
+    入力するとその数を加味して自動計算されます。</p><p>
+    「所持数を保存」で、このブラウザに保存できます。</p><p>
+    素材費は単価が判明している分のみ。調合費は登録分のみです。</p></footer><noscript>この計算機にはJavaScriptを有効にしてください。</noscript></main></body></html>
